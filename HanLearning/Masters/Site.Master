@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HanLearning.Masters.Site" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link href="../Content/Vendor/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Content/site.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="Header" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+	        <div class="navbar-header">
+		        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="/"></a>
+	        </div>
+	        <div id="main-navbar" class="navbar-collapse collapse">
+		        <ul class="nav navbar-nav">
+                    <li><a href="/Dictionary">Dictionary</a></li>
+                    <li><a href="../Dictionary/WordGroup.aspx">Word Groups</a></li>
+                    <% if (UserID != -1) { %>
+                        <li><a href="../Dictionary/Learning.aspx">Learning</a></li>
+                    <% } %>
+		            <asp:ContentPlaceHolder ID="LeftNavbar" runat="server"></asp:ContentPlaceHolder>    
+                </ul>
+		        <ul class="nav navbar-nav navbar-right">
+			        <asp:ContentPlaceHolder ID="RightNavbar" runat="server"></asp:ContentPlaceHolder>  
+                    <li>
+                        <% if (UserID == -1) { %>
+                            <a href="/Dictionary/Users/Login.aspx">Login</a>
+                        <% } else { %>
+                            <a>Logout</a>
+                        <% } %>
+                    </li>  
+                    <li>
+                        <select class="form-control culture-select">
+                            <asp:PlaceHolder ID="cultureOptions" runat="server"></asp:PlaceHolder>
+                        </select>
+                    </li>
+                    <li class="search-bar">
+                        <form class="search-form" action="../Dictionary">
+                            <div class="input-group">
+                                <input type="text" name="search" class="form-control" />
+                                <span class="input-group-btn">
+                                    <input type="submit" value="search" class="btn btn-default" />
+                                </span>
+                            </div>
+                        </form>
+                    </li>
+		        </ul>
+	        </div>
+	    </div>
+    </nav>
+    <div class="container">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <%--<asp:ScriptManager runat="server">
+        <Scripts>
+            <asp:ScriptReference Name="JQuery" />
+        </Scripts>
+    </asp:ScriptManager>--%>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="../Content/Vendor/js.cookie-2.1.3.min.js"></script>
+    <script src="../Content/site.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var cultures = $(".culture-select");
+            cultures.find("option:selected").removeAttr('selected');
+            cultures.find('[value=' + Cookies.get('culture') + ']').attr('selected', true);
+        }).on('change', '.culture-select', function() {
+            Cookies.set('culture', $(this).find('option:selected').val(), { path: '/Dictionary/' });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="FooterScripts" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

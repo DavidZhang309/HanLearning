@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HanLearning", "HanLearning\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HanLearning.Tests", "HanLearning.Tests\HanLearning.Tests.csproj", "{B6BB7073-D6BF-46B7-908C-FE7224AA1248}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreFramework.ASP", "..\CoreFramework.ASP\CoreFramework.ASP.csproj", "{BF1BD4BF-3FB9-4E93-9F01-84DC29613AC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreFramework", "..\CoreFramework\CoreFramework.csproj", "{3677ABAB-BF98-44D9-A05C-CB1D0FF28806}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B6BB7073-D6BF-46B7-908C-FE7224AA1248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6BB7073-D6BF-46B7-908C-FE7224AA1248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6BB7073-D6BF-46B7-908C-FE7224AA1248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1BD4BF-3FB9-4E93-9F01-84DC29613AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1BD4BF-3FB9-4E93-9F01-84DC29613AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1BD4BF-3FB9-4E93-9F01-84DC29613AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1BD4BF-3FB9-4E93-9F01-84DC29613AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3677ABAB-BF98-44D9-A05C-CB1D0FF28806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3677ABAB-BF98-44D9-A05C-CB1D0FF28806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3677ABAB-BF98-44D9-A05C-CB1D0FF28806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3677ABAB-BF98-44D9-A05C-CB1D0FF28806}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

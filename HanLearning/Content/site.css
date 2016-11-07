@@ -1,0 +1,97 @@
+﻿.result.panel {
+    margin-top: 10px;
+}
+
+.navbar .culture-select {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.navbar .search-bar {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    width: 200px;
+}
+
+.def-entry {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.def-entry:hover {
+    background-color: #eee;
+}
+
+.def-entry:not(:first-child) {
+	border-top: 3px solid black;
+}
+
+.def-entry .character {
+    text-align: center;
+    font-size: 4em;
+}
+
+.group-entry {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.group-entry .name {
+    font-weight: bold;
+}
+
+.learning-entry {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.learning-entry .character {
+    text-align: center;
+    font-size: 4em;
+}
+
+.learning-entry .options button {
+    width: 100%;
+    height: 50px;
+}
+
+.learned-board .character {
+    text-align: center;
+    font-size: 4em;
+}
+
+.learned-board-header {
+    cursor: pointer;
+}
+learned-board-header:hover {
+    background-color: #aaa;
+}
+
+.main-login input {
+    margin-bottom: 10px;
+}
+
+.analysis .learned {
+    color: #aaa;
+}
+.analysis .learning {
+    text-decoration: underline;
+    -moz-text-decoration-color: #aaa;
+    text-decoration-color: #aaa;
+}
+
+textarea.textarea-block {
+    max-width: 100%;
+    min-height: 200px;
+}
+
+.character-block {
+    font-size: 2em;
+    font-weight: bold;
+}
