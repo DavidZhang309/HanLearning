@@ -12,6 +12,8 @@ namespace HanLearning.Masters
     {
         public int UserID { get; private set; } = -1;
         public bool SelfLearning { get; private set; }
+        public string PreferredLanguage { get; private set; } = "zh-HK";
+        
         private void LoadUserSession()
         {
             using (HanDatabase db = new HanDatabase())
@@ -48,6 +50,7 @@ namespace HanLearning.Masters
             {
                 UserID = (int)userID;
                 object selfLearning = Session["SelfLearning"];
+                object preferredLangauge = Session["preferredLanguage"];
 
                 //if selfLearning is null, user info hash not been loaded in
                 if (selfLearning == null)
@@ -59,6 +62,11 @@ namespace HanLearning.Masters
                 if (selfLearning is bool)
                 {
                     SelfLearning = (bool)selfLearning;
+                }
+
+                if (preferredLangauge is string)
+                {
+                    PreferredLanguage = (string)preferredLangauge;
                 }
             }
         }
