@@ -69,12 +69,13 @@ namespace HanLearning.Masters
             StringBuilder builder = new StringBuilder();
             using (HanDatabase db = new HanDatabase())
             {
-                DataTable data = db.ExecuteQuery("SELECT Culture FROM vCultureList");
+                DataTable data = db.ExecuteQuery("SELECT Culture FROM vCultureList ORDER BY Culture DESC");
 
                 foreach (DataRow row in data.Rows)
                 {
                     string culture = row["culture"].ForceToString();
-                    builder.AppendFormat("<option value='{0}'>{1}</option>", culture, GetGlobalResourceObject("Literals", culture));
+                    
+                    builder.AppendFormat("<option value='{0}' {1}>{2}</option>", culture, culture == PreferredLanguage ? "selected='selected'" : "", GetGlobalResourceObject("Literals", culture));
                 }
             }
             cultureOptions.Controls.Add(new LiteralControl(builder.ToString()));
