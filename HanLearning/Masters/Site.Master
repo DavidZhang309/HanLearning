@@ -5,6 +5,9 @@
 <head runat="server">
     <title></title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../Content/Vendor/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../Content/site.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="Header" runat="server">
@@ -27,6 +30,12 @@
                     <li><a href="../Dictionary/WordGroup.aspx">Word Groups</a></li>
                     <% if (UserID != -1) { %>
                         <li><a href="../Dictionary/Learning.aspx">Learning</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Tools<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../Tools/TextTranslator.aspx">Text Translator</a></li>
+                            </ul>
+                        </li>
                     <% } %>
 		            <asp:ContentPlaceHolder ID="LeftNavbar" runat="server"></asp:ContentPlaceHolder>    
                 </ul>
