@@ -10,9 +10,8 @@ namespace HanLearning.Masters
 {
     public partial class Site : System.Web.UI.MasterPage
     {
-        public int UserID { get; protected set; } = -1;
-        public bool SelfLearning { get; protected set; }
-
+        public int UserID { get; private set; } = -1;
+        public bool SelfLearning { get; private set; }
         private void LoadUserSession()
         {
             using (HanDatabase db = new HanDatabase())
