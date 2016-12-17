@@ -14,6 +14,10 @@ namespace HanLearning.Data
         public Dictionary<int, CharacterData> Characters { get; private set; } = new Dictionary<int, CharacterData>();
 
         public CharacterLookupMapping(HanDatabase db, IEnumerable<int> utfCodes, string culture, int userID)
+            : this(db, utfCodes, culture, userID, VariantType.None)
+        { }
+
+        public CharacterLookupMapping(HanDatabase db, IEnumerable<int> utfCodes, string culture, int userID, VariantType variantType)
         {
             DataTable utfCodeTable = new DataTable();
             utfCodeTable.Columns.Add("UTFCode");
@@ -25,11 +29,23 @@ namespace HanLearning.Data
 
                 utfCodeTable.Rows.Add(row);
             }
+
+            SqlParameter variantParam;
+            if (variantType == VariantType.None)
+            {
+                variantParam = new SqlParameter("VariantLookup", null);
+            }
+            else
+            {
+                variantParam = new SqlParameter("VariantLookup", (int)variantType);
+            }
+
             SqlParameter[] parameters =
             {
                 new SqlParameter("UTFCodes", utfCodeTable) { TypeName = "tvpUTFCodes" },
                 new SqlParameter("Culture", culture),
-                new SqlParameter("UserID", userID)
+                new SqlParameter("UserID", userID),
+                variantParam                
             };
 
             DataSet result = db.ExecuteStoredProcedure("spCharacterLookup", parameters);

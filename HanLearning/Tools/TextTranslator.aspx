@@ -3,13 +3,20 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <form runat="server">
+
         <asp:TextBox ID="textBlock" TextMode="MultiLine" CssClass="form-control textarea-block" runat="server"></asp:TextBox>
-        <asp:Label AssociatedControlID="characterSetOption" runat="server">Character Set: </asp:Label>
-        <asp:DropDownList ID="characterSetOption" CssClass="form-control" runat="server">
-            <asp:ListItem Value="0" Text="Normal"></asp:ListItem>
-            <asp:ListItem Value="2" Text="Traditional"></asp:ListItem>
-            <asp:ListItem Value="1" Text="Simplified"></asp:ListItem>
-        </asp:DropDownList>
+        
+        <div class="input-group">
+            <span class="input-group-addon">
+                Character Set: 
+                <%--<asp:Label AssociatedControlID="characterSetOption" runat="server">Character Set: </asp:Label>--%>
+            </span>
+            <asp:DropDownList ID="characterSetOption" CssClass="form-control" runat="server">
+                <asp:ListItem Value="0" Text="Normal"></asp:ListItem>
+                <asp:ListItem Value="2" Text="Traditional"></asp:ListItem>
+                <asp:ListItem Value="1" Text="Simplified"></asp:ListItem>
+            </asp:DropDownList>
+        </div>
         <asp:Button Text="Analyse" CssClass="btn btn-default" runat="server" />
 
         <div class="row">
@@ -32,7 +39,6 @@
             <asp:PlaceHolder ID="resultArea" runat="server"></asp:PlaceHolder>
         </div>
     </form>
-    
 </asp:Content>
 <asp:Content ContentPlaceHolderID="FooterScripts" runat="server">
 </asp:Content>

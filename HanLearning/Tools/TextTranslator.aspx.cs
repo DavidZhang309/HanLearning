@@ -37,7 +37,7 @@ namespace HanLearning.Tools
             //query and render
             using (HanDatabase db = new HanDatabase())
             {
-                CharacterLookupMapping query = new CharacterLookupMapping(db, charset, "zh-HK", ((HanLearning.Masters.Site)this.Master).UserID);
+                CharacterLookupMapping query = new CharacterLookupMapping(db, charset, "zh-HK", ((HanLearning.Masters.Site)this.Master).UserID, charsetType);
 
                 string[] blocks = textBlock.Text.Split('\n');
                 StringBuilder sb = new StringBuilder();
@@ -48,10 +48,11 @@ namespace HanLearning.Tools
                         CharacterData data;
                         if (query.Characters.TryGetValue(Convert.ToInt32(c), out data)){
                             int resultChar = Convert.ToInt32(c);
-
-                            if (charsetType == data.VariantType && data.Variants.Count > 0)
+                            
+                            if (charsetType == data.VariantType && data.Variants.Count > 0)// && query.Characters.ContainsKey(data.Variants[0]))
                             {
-                                resultChar = data.Variants[0];
+                                data = query.Characters[data.Variants[0]];
+                                resultChar = data.UTFCode;
                             }
 
                             if (data.LearningStatus == LearningStatus.Learned)
