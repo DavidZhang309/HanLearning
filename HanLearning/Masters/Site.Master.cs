@@ -80,12 +80,6 @@ namespace HanLearning.Masters
             }
             cultureOptions.Controls.Add(new LiteralControl(builder.ToString()));
 
-            // Register CDN Scripts
-            ScriptManager.ScriptResourceMapping.AddDefinition("JQuery", new ScriptResourceDefinition()
-            {
-                CdnPath = "http://code.jquery.com/jquery-2.2.4.min.js",
-                Path = "/Content/Vendor/jquery-2.2.4.min.js"
-            });
         }
     }
 }
