@@ -110,6 +110,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\site.js" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\js\npm.js" />
     <Content Include="Content\Vendor\font-awesome-4.6.3\css\font-awesome.min.css" />
     <Content Include="Content\Vendor\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
     <Content Include="Admin\Default.aspx" />
@@ -216,6 +224,14 @@
     <Content Include="Dictionary\Queries\CharLookup.ashx" />
     <Content Include="Dictionary\Queries\LearningUpdate.ashx" />
     <Content Include="Dictionary\Queries\SetPreferences.ashx" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Vendor\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\LocalServer.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
