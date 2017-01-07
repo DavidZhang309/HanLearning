@@ -46,7 +46,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div class=".learned-board-header" data-toggle="collapse" data-target=".learned-board"><h3>Learned Characters (Count: <%= learned.Count %>)</h3></div>
+            <div class="learned-board-header" data-toggle="collapse" data-target=".learned-board">Learned Characters (Count: <%= learned.Count %>)</div>
         </div>
     </div>
     <div class="learned-board row collapse">
