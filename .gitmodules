@@ -2,3 +2,7 @@
 	path = CoreFramework
 	url = https://github.com/DavidZhang309/CoreFramework.git
 	branch = master
+[submodule "CoreFramework.ASP"]
+	path = CoreFramework.ASP
+	url = https://github.com/DavidZhang309/CoreFramework.ASP.git
+	branch = master
