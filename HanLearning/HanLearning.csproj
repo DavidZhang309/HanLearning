@@ -96,7 +96,7 @@
     <Content Include="Content\Vendor\jquery-2.2.4.min.js" />
     <Content Include="Content\Vendor\js.cookie-2.1.3.min.js" />
     <Content Include="Dictionary\Default.aspx" />
-    <Content Include="Dictionary\Learning.aspx" />
+    <Content Include="Learning\Default.aspx" />
     <Content Include="Dictionary\Users\Login.aspx" />
     <Content Include="Dictionary\WordGroup.aspx" />
     <Content Include="Global.asax" />
@@ -129,12 +129,12 @@
     <Compile Include="Dictionary\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dictionary\Learning.aspx.cs">
-      <DependentUpon>Learning.aspx</DependentUpon>
+    <Compile Include="Learning\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dictionary\Learning.aspx.designer.cs">
-      <DependentUpon>Learning.aspx</DependentUpon>
+    <Compile Include="Learning\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dictionary\Queries\CharLookup.ashx.cs">
       <DependentUpon>CharLookup.ashx</DependentUpon>
@@ -210,7 +210,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controls\" />
-    <Folder Include="Learning\" />
+    <Folder Include="Learning\Quiz\" />
+    <Folder Include="Learning\Testing\" />
     <Folder Include="Tools\Queries\" />
   </ItemGroup>
   <ItemGroup>

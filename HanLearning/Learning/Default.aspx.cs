@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace HanLearning.Dictionary
+namespace HanLearning.Dictionary.Learning
 {
-    public partial class Learning : System.Web.UI.Page
+    public partial class Default : System.Web.UI.Page
     {
         protected LearningCharacterMapping query;
 

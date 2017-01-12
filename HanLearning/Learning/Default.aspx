@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masters/Site.Master" AutoEventWireup="true" CodeBehind="Learning.aspx.cs" Inherits="HanLearning.Dictionary.Learning" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masters/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="HanLearning.Dictionary.Learning.Default" %>
 <%@ Import Namespace="HanLearning.Data" %>
 
 <asp:Content ContentPlaceHolderID="Header" runat="server">

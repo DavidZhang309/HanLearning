@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HanLearning.Dictionary {
+namespace HanLearning.Dictionary.Learning {
     
     
-    public partial class Learning {
+    public partial class Default {
     }
 }
