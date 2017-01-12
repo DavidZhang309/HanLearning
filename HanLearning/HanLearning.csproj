@@ -180,9 +180,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Masters\Site.Master" />
     <Content Include="Content\site.css" />
@@ -220,11 +217,11 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CoreFramework.ASP\CoreFramework.ASP.csproj">
+    <ProjectReference Include="..\CoreFramework.ASP\CoreFramework.ASP.csproj">
       <Project>{bf1bd4bf-3fb9-4e93-9f01-84dc29613ac3}</Project>
       <Name>CoreFramework.ASP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CoreFramework\CoreFramework.csproj">
+    <ProjectReference Include="..\CoreFramework\CoreFramework.csproj">
       <Project>{3677abab-bf98-44d9-a05c-cb1d0ff28806}</Project>
       <Name>CoreFramework</Name>
     </ProjectReference>
